@@ -1,4 +1,3 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -21,7 +20,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 const authRoute = require("./routes/auth");
+const loginRoute = require("./routes/login");
 app.use("/auth", authRoute);
+app.use("/login", loginRoute);
 
 app.get("/", (req, res) => {
     res.render("index.ejs");    
