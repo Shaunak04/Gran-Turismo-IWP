@@ -21,8 +21,10 @@ app.use(bodyParser.json());
 
 const authRoute = require("./routes/auth");
 const loginRoute = require("./routes/login");
+const privateRoute = require("./routes/private");
 app.use("/auth", authRoute);
 app.use("/login", loginRoute);
+app.use("/private", privateRoute);
 
 app.get("/", (req, res) => {
     res.render("index.ejs");    

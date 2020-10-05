@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const User = require("../models/User.js");
 
@@ -23,8 +24,10 @@ router.post("/", async (req,res) => {
             const validatePass = await bcrypt.compare(userPass, emailExists.password);
             if(!validatePass) {
                 error = "Password incorrect!";
-                res.redirect("");
+                res.redirect("/");
             } 
+            const token = jwt.sign({ email: userEmail }, process.env.SECRET_TOKEN);
+            res.header("jwt-token", token).send(token);
         }
         res.redirect("/");
     }    
