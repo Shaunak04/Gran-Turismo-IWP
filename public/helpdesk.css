@@ -1,0 +1,144 @@
+@font-face{
+    src:url("../../fonts/coldiac/Coldiac.otf");
+    font-family: coldiac;
+}
+
+@font-face{
+    src:url("../../fonts/deluce/Deluce.otf");
+    font-family: coldiac;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+body{
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    background-color:#c0c0c0!important;
+}
+
+.back{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    background-image:url("../images/helpdesk.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-text{
+    padding: 40px 50px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgba(43, 43, 43, 0.37);
+    z-index: +1;
+    height: max-content;
+    width: 70%;
+    backdrop-filter: blur(3px);
+    
+}
+.fa-envelope,.fa-phone-square-alt,.fa-video{
+    font-size: 36px;
+    color: black;
+}
+.card-body{
+    background-color: #1e2e42;
+    text-align: center;
+}
+.card-title{
+    font-family: coldiac;
+    font-weight: 900;
+    font-size: 150%
+}
+.card-text{
+    font-weight: 400;
+    color: #d6d6d6;
+}
+
+.btn{
+    background-color:#ff7675!important;
+    border-color:#ff7675!important;
+    transition-duration: 1s;
+    margin-right: 10px;
+    font-family: coldiac;
+}
+.custom-select{
+    margin-bottom: 10px;
+}
+.btn:hover{
+    transform:scale(1.1);
+    background-color:#ff4d4d!important;
+    border-color:#ff4a4a!important;
+
+}
+form label{
+    font-family: coldiac;
+    font-size:120%;
+}
+
+.ml1 {
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: 900;
+    font-size: 220%;
+    color: white;
+    font-family: coldiac;
+  }
+  
+  .ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  
+  .ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+.form-holder{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #1e2e42;
+    margin-top:55%;
+    margin-bottom:50px;
+    border-radius:15px;
+    color: white;
+    padding: 20px ;
+}
+form{
+    margin: 20px 40px;
+}
+
+.submit{
+    display: block!important;
+    margin: 10px auto!important;
+}

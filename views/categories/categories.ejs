@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Gran Turismo E-showroom">
+        <meta name="author" content="Nikhil Chapre, Saumitra Lohokare, Shaunak Deshpande">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="keywords" content="showroom, luxury, cars, suv, brands, online showroom">
+        <title>Gran Turismo | E-Showroom</title>
+        <link rel="stylesheet" href="helpdesk.css">
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="categories.css">
+        <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- navbar -->
+
+        <%- include('../partials/navbar.ejs') %>
+
+        <!-- Middle Start -->
+
+        <div class = "mid-cat">
+            <select onchange = "location = this.value">
+                <option value = "">Search By Category</option>
+                <option value = "/categories/sedan">Sedan</option>
+                <option value = "/categories/sports">Sports</option>
+                <option value = "/categories/suv">SUV</option>
+                <option value = "/categories/coupe">Coupe</option>
+            </select>
+        </div>
+
+        
+
+
+        <!-- Footer Start -->
+          <%- include('../partials/footer.ejs') %>
+        <!-- Footer Ends -->

@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Gran Turismo | E-Showroom</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/homepage.css">
+        <link rel="stylesheet" href="/categories.css">
+        <link rel="stylesheet" href="/fonts.css">
+        <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      .card-stack {
+        position: relative;
+        top: 15em;
+      }
+
+      .card {
+        margin: 15px;
+        width: 90vw;
+        margin: 10vh 5vw;
+        height: 470px;
+        overflow-y: auto;
+        border-radius: 15px;
+        background-color: #162232;
+        border: 2px solid white;
+        box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.8),
+          0 6px 20px 0 rgba(100, 100, 100, 0.8);
+        color: white;
+        padding: 15px;
+        padding-left: 20px;
+      }
+      .card img {
+        width: 40%;
+        float: right;
+        border: 2px solid white;
+        border-radius: 12px;
+      }
+      .card .name {
+        font-weight: bolder;
+        font-size: 2.4em;
+        text-align-last: center;
+        padding: 5px;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 55%;
+        color: white;
+        font-size: 1.3em;
+        padding: 15px;
+        position: relative;
+        bottom: 10em;
+      }
+      td {
+        padding: 15px;
+        border-collapse: collapse;
+        border: 1px solid white;
+      }
+      tr,
+      td,
+      table {
+        border-collapse: collapse;
+      }
+      td .data {
+        color: #ff7675;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!--Navbar Starts-->
+      <%- include('../partials/navbar.ejs') %>
+    <!--Navbar Ends-->
+    
+    <div class = "card-stack">
+
+    <% cars.forEach(car => { %>
+    <div class="card">
+      <div class="name">
+        <span><%= car.brandName %></span> <span><%= car.model %></span>
+        <img src="/images/bentley.jpg" />
+      </div>
+      <table>
+        <tr>
+          <td>Year : <span class="data"><%= car.year %></span></td>
+          <td>Category : <span class="data"><%= car.category %></span></td>
+        </tr>
+        <tr>
+          <td>Price : <span class="data"><%= car.price %> </span></td>
+          <td>Engine Specs : <span class="data"><%= car.Engine %></span></td>
+        </tr>
+        <tr>
+          <td>Horsepower : <span class="data"><%= car.horsepower %></span></td>
+          <td>Torque : <span class="data"><%= car.torque %></span></td>
+        </tr>
+        <tr>
+          <td>Wheel Drive System : <span class="data"><%= car.wheeldrive %></span></td>
+          <td>Seats : <span class="data"><%= car.seats %></span></td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="2">
+            Available colors :
+            <span class="data"
+              ><%= car.colors %>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <% }) %>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/a21a405680.js" crossorigin="anonymous"></script>
+      <script src = "js/navbar.js"></script>
+  </body>
+</html>

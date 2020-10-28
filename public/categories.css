@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+}
+
+.mid-cat {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;  
+  background-color: black;
+}
+
+select {
+  padding: 10px;
+}
+
+footer {
+  position: absolute;
+  top: 43.4em;
+}

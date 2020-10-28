@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
-const User = require("../models/User.js");
+const User = require("../models/Car.js");
 
 router.get("/", (req,res) => {
     res.render("Login/login.ejs");
